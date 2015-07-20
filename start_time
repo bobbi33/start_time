@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include<windows.h>
+
+int main(){
+	DWORD k = GetTickCount();
+	int s = 0;
+	int min = 0;
+	int sec = 0;
+	int hour = 0;
+
+	s = k/1000;
+	if(s > 60){
+		min = s/60;
+		sec  =s%60;
+	}
+
+	if(min > 60){
+		hour = min/60;
+		min = min%60;
+	}
+
+	printf("your computer has been open %d hour %d minutes %d seconds",hour,min, sec);
+	system("pause");
+
+	return 0;
+
+}
